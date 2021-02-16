@@ -36,7 +36,8 @@ body.active_admin .header {
 
     height: 6.4rem;
     line-height: 6.4rem;  
-
+    overflow: visible;
+    position: relative;
     .menu_item {
       &.current >a {
         background: darken($primary-color, 15%);
@@ -46,6 +47,31 @@ body.active_admin .header {
         padding-left: 1rem;
         padding-right: 1rem;
         display: inline-block;
+        position: relative;
+      }
+    }
+    .dropdown-content {
+      position: absolute;
+      .menu_item {
+        display: block;
+        width: 100%;
+        height: 6.4rem;
+        line-height: 6.4rem;
+        position: relative;
+
+        a {
+          width: 100%;
+        }
+        &.current {
+          background: darken($primary-color, 15%);
+        }
+        &:hover {
+          background: $header-dropdown-active;
+          a {
+            background: $header-dropdown-active;
+            color: #093272 !important;
+          }
+        }
       }
     }
   }

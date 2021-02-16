@@ -4,7 +4,7 @@ html {
 
 body.active_admin {
   font-size: 1.4rem;
-  min-height: 100vh;
+  //min-height: 100vh;
 
   [type="submit"] {
     @extend .btn;
@@ -147,6 +147,7 @@ body.active_admin {
     @extend .card;
 
     margin-top: 0.75rem;
+    overflow: scroll;
 
     >.panel {
       padding: 2rem !important;
@@ -157,7 +158,9 @@ body.active_admin {
     @extend .container;
 
     background: $admin-bg-color;
-    min-height: 100vh;
+    //min-height: 100vh;
     position: relative;
+    width: 100%;
+    max-width: none;
   }
 }
